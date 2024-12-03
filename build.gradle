@@ -2,6 +2,10 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.3.1'
     id 'io.spring.dependency-management' version '1.1.5'
+    // kotlin 플러그인
+    id 'org.jetbrains.kotlin.jvm' version '1.9.22'
+    id 'org.jetbrains.kotlin.plugin.spring' version '1.9.22'
+    id 'org.jetbrains.kotlin.plugin.jpa' version '1.9.22'
 }
 
 group = 'com.example'
@@ -30,6 +34,10 @@ dependencies {
     implementation 'mysql:mysql-connector-java:8.0.28'
 
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'
+
+    // kotlin
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+    implementation("org.jetbrains.kotlin:kotlin-reflect")
 
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.h2database:h2'
